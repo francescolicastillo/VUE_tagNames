@@ -21,14 +21,16 @@ export default {
     },
     data:() => {
         return {
-            tagsArray: [] as Array<String>,
+            tagsArray: [] as Array<string>,
         }
     },
     methods: {
-        saveTag(tagEmit: String) {
-            this.tagsArray.push(tagEmit);
+        saveTag(tagEmit: string) {
+            if(!this.tagsArray.some(tag => tag === tagEmit)){
+                this.tagsArray.push(tagEmit);
+            }
         },
-        deleteTag(tagDelete: String) {
+        deleteTag(tagDelete: string) {
             this.tagsArray = Array.from(this.tagsArray).filter(tag => tag !== tagDelete);
         },
         deleteLastTag(){
