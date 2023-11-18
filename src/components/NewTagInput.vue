@@ -9,7 +9,7 @@
 
 <script lang="ts">
 export default {
-    name: "Input",
+    name: "NewTagInput",
     emits: ["newTag", "deleteLastTag"],
     data:() => {
         return {
@@ -33,5 +33,7 @@ export default {
 </script>
 
 <style>
-
+    input {
+        width: max-content;
+    }
 </style>

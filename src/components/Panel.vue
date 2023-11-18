@@ -1,22 +1,25 @@
 <template>
     <h1>Introduce your tags</h1>
-    <span v-for="(tag, index) in tagsArray" :key="index"> 
-        <Tag :tag="tag" @deleteTag="deleteTag($event)"/>
-    </span>
-    <Input 
-        @newTag="saveTag($event)" 
-        @deleteLastTag="deleteLastTag"
-    />
+    <div id="tagsAndInput">
+        <span v-for="(tag, index) in tagsArray" :key="index"> 
+            <Tag :tag="tag" @deleteTag="deleteTag($event)"/>
+        </span>
+        <NewTagInput 
+            @newTag="saveTag($event)" 
+            @deleteLastTag="deleteLastTag"
+        />
+    </div>
 </template>
 
 <script lang="ts">
-import Input from './Input.vue';
+import NewTagInput from './NewTagInput.vue';
 import Tag from './Tag.vue';
 
 export default {
+    // eslint-disable-next-line vue/multi-word-component-names
     name: "Panel",
     components:{
-        Input,
+        NewTagInput,
         Tag,
     },
     data:() => {
@@ -40,6 +43,18 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+    h1 {
+        margin: 0 auto;
+        color: aliceblue;
+        text-align: center;
+        text-transform: uppercase;
+        padding-bottom: 30px;
+    }
 
-</style>
+    #tagsAndInput {
+        background-color: white;
+        padding: 15px 10px;
+        margin: auto;
+    }
+</style>>
