@@ -6,27 +6,32 @@ export default {
     Panel,
   }
 }
-
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-    </div>
-  </header>
-
   <main>
     <Panel />
   </main>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
+<style>
+html {
+  height: 100vh;
 }
 
 main {
-  background-color: aqua;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 60px 40px;
+  background-color: rgb(17, 17, 17);
+  border-radius: 10px;
 }
+
+body {
+  background-image: linear-gradient(to bottom left, rgb(69, 212, 255), yellow);
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 
 </style>
