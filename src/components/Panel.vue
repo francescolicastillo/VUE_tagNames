@@ -53,6 +53,7 @@ export default {
     }
 
     #tagsAndInput {
+        display: block;
         background-color: white;
         padding: 15px 10px;
         margin: auto;

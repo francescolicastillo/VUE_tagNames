@@ -23,11 +23,11 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
     div {
-        display: inline;
+        display: inline-block;
         background-color: rgb(255, 217, 0);
-        margin: 15px 2px;
+        margin: 2px 2px;
         padding: 5px 3px;
         border-radius: 5px;
     }
